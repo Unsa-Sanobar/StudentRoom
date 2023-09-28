@@ -42,11 +42,13 @@ class AddFragment : Fragment() {
         val fatherNameEditText = view?.findViewById<EditText>(R.id.fatherName)
         val semesterName = view?.findViewById<EditText>(R.id.semester)
         val degreeName = view?.findViewById<EditText>(R.id.degree)
+        val contact = view?.findViewById<EditText>(R.id.contact)
         val firstName = firstNameEditText?.text.toString()
         val lastName = lastNameEditText?.text.toString()
         val fatherName = fatherNameEditText?.text.toString()
         val semester = semesterName?.text.toString()
         val degree = degreeName?.text.toString()
+
         if(inputCheck(firstName,lastName,fatherName,semester,degree)){
             val user = User(0,firstName,lastName,fatherName,Integer.parseInt(semester.toString()),degree)
 
